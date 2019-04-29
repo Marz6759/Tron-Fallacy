@@ -1,10 +1,10 @@
-## Welcome to GitHub Pages
+## Welcome to TRON
 
-You can use the [editor on GitHub](https://github.com/Marz6759/TRON/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You can download the executables for [WINDOWS](https://github.com/Marz6759/TRON/edit/master/README.md) and [LINUX](https://github.com/Marz6759/TRON/edit/master/README.md) of the game here.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+If you wish to view the source code for the game, you may do so [here](https://github.com/Marz6759/TRON).
 
-### Markdown
+### Description
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
