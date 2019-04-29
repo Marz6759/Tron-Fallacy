@@ -1,0 +1,1 @@
+/usr/bin/c++  -lncurses -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -g   CMakeFiles/TRON.dir/main.cpp.o  -o TRON -lcurses 

@@ -6,22 +6,15 @@ If you wish to view the source code for the game, you may do so [here](https://g
 
 ### Description
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Our group has decided to recreate the retro era of Tron by coding a terminal-based game inspired by Tron Legacy.
+This project utilises several advanced libraries/data structures like;
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
+- Curses
+- SFML
+- Vectors
+- Unordered_Maps
 
 [Link](url) and ![Image](src)
 ```
@@ -30,7 +23,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 ### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Marz6759/TRON/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Marz6759/TRON/settings). The name of this theme is saved in the Jekyll `main.cpp` configuration file.
 
 ### Support or Contact
 
