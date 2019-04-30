@@ -1,47 +1,118 @@
 #include <iostream>
+#include "ascii.hxx"
+#include "metric.hxx"
+#include "xterm.h"
+#include "image.hxx"
 #include <unistd.h>
 #include <unordered_map>
-#include "curses.h"
 #include <stdio.h>
+#include <ncurses.h>
 #include <stdlib.h>
-#include <curses.h>
 #include <vector>
 #include <SFML/Audio.hpp>
-#include <string.h>
+#include <tuple>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+
 void suspense();
 using namespace std;
 unordered_map <int, int> dec_inc = {{1,2},{2,1},{3,4},{4,3}};
-sf::Sound sound;
-sf::SoundBuffer buffer;
-void playsound(string filepath){
-    try{
-        if (!buffer.loadFromFile(filepath)){
-            return;
+bool aiplay=false;
+sf::Sound sound, effect;
+sf::SoundBuffer buffer, buffer2;
+void playsound(string filepath, int option=2){
+    if (option==1){
+        try{
+            if (!buffer.loadFromFile(filepath)){
+                return;
+            }
         }
+        catch (...)
+        {
+        }
+        sound.setBuffer(buffer);
+        sound.play();
     }
-    catch (...)
-    {
+    else{
+        try{
+            if (!buffer2.loadFromFile(filepath)){
+                return;
+            }
+        }
+        catch (...)
+        {
+        }
+        effect.setBuffer(buffer2);
+        effect.play();
     }
-    sound.setBuffer(buffer);
-    sound.play();
+}
+
+int cols, lines;
+WINDOW* InitCurses()
+{
+    putenv("TERM=xterm-256color");
+    getmaxyx(stdscr, lines, cols);
+    nodelay(stdscr, TRUE);
+    timeout(0);
+    start_color();
+    for (int i = 0; i < COLORS; i++)
+        init_pair(i, i, 0);
+    return stdscr;
 }
 class grid{
 public:
 
     int length=0, width=0;
     char grid[1000][1000];
-    void print(char* message){
-        int x = strlen(message);
+    void print(char* message, int get=2){
+        //3 for immediate print, 2 for default slow print and 4 for overwrite on screen print.
+        nodelay(stdscr, TRUE);
+        noecho();
+        int speed = 90000;
+        if(get<4){
+            clear();
+        }
+
+        string string1=message;
+        size_t x = strlen(message), counter=0;
         move(length/2, (width*3-x)/2);
-        printw("%s\n", message);
-        refresh();
+        if (get == 3){
+            printw("%s\n", message);
+            refresh();
+            sleep(1);
+        }
+        else if (get==5){
+            printw("%s\n", message);
+            refresh();
+            sleep(1);
+        }
+        else {
+            while (counter != x) {
+                int ch = getch();
+                if (ch == 10) {
+                    speed = 10000;
+                }
+                printw("%c", string1[counter]);
+                refresh();
+                usleep(speed);
+                counter++;
+
+            }
+            printw("\n");
+            if (get != 1) {
+                getchar();
+            }
+        }
     }
+
     void grid_builder(int x, int y){
         length = x;
         width = y;
-        attron(COLOR_PAIR(1));
+        attron(COLOR_PAIR(6));
         attron(A_BOLD);
-        print("B U I L D I N G\tG R I D\n");
+        playsound("Files/battle.ogg");
+        print("B U I L D I N G\tG R I D\n",3);
         sleep(1);
         clear();
         for(int i=0; i<x; i++){
@@ -59,8 +130,8 @@ public:
         }
         suspense();
         clear();
-        print("Done\n");
-        attroff(COLOR_PAIR(1));
+        print("Done\n",3);
+        attroff(COLOR_PAIR(6));
         attroff(A_BOLD);
         refresh();
         sleep(1);
@@ -69,27 +140,26 @@ public:
     }
     void grid_output(){
         clear();
-        refresh();
         for(int i=0; i<length; i++){
 
             for (int j=0; j<width; j++){
                 if (grid[i][j] == '.'){
                     printw(" ");
-                    attron(COLOR_PAIR(1));
+                    attron(COLOR_PAIR(6));
                     printw(".");
-                    attroff(COLOR_PAIR(1));
+                    attroff(COLOR_PAIR(6));
                     printw(" ");
                 }
                 else if (grid[i][j] == ','){
                     printw(" ");
-                    attron(COLOR_PAIR(2));
+                    attron(COLOR_PAIR(1));
                     printw(".");
-                    attroff(COLOR_PAIR(2));
+                    attroff(COLOR_PAIR(1));
                     printw(" ");
                 } else if(grid[i][j] == '*' || grid[i][j]=='#'){
-                    attron(COLOR_PAIR(3));
+                    attron(COLOR_PAIR(99));
                     printw(" %c ", grid[i][j]);
-                    attroff(COLOR_PAIR(3));
+                    attroff(COLOR_PAIR(99));
                 }
                 else {
                     printw(" %c ", grid[i][j]);
@@ -101,25 +171,270 @@ public:
         refresh();
     }
 };
-
 grid grid1;
+const int STDOUT(1);
+void displayimg(char *argv)
+{
+    ImageLoader *loader = ImageLoader::get_instance(argv);
+    vector<vector<vector<uint32_t>>> img;;
+    vector<uint32_t> delay;
+
+    tie(delay, img) = loader->load(argv, cols/2, 1 << 16);
+
+    if (!isatty(STDOUT)) {
+        vector<vector<string>> asc = IMG2ASCII(img).convert();
+        uint32_t fptr = 0;
+        printf("export TERM=xterm-256color\n");
+        printf("clear\n");
+        for (auto& frm: asc) {
+            uint32_t rptr = 1;
+            for (auto& row: frm) {
+                printf("echo \"[%d;1H\"\n", rptr);
+                printf("echo \"%s\"\n", row.c_str());
+                ++rptr;
+            }
+            printf("sleep %.2f\n", delay[fptr] / 100.);
+            ++fptr;
+        }
+        clear();
+        refresh();
+        return;
+    }
+
+    refresh();
+
+    vector<vector<string>> asc = IMG2ASCII(img).convert_raw();
+    int zoom_ptr = 0;
+    for (;;) {
+        uint32_t fptr = 0;
+        for (auto& frm: asc) {
+            int rptr = 0, cptr = 0;
+            for (int r = zoom_ptr; r < frm.size(); r++) {
+                auto& row = frm[r];
+                for (cptr = 0; cptr < row.size(); cptr++) {
+                    int col = (unsigned char)row[cptr];
+                    attrset(COLOR_PAIR(col));
+                    mvprintw(rptr, cptr*2, "##");
+                }
+                ++rptr;
+            }
+            attrset(COLOR_PAIR(0));
+            refresh();
+            usleep(10000 * delay[fptr]);
+            ++fptr;
+        }
+        int ch = getch();
+        if (ch == 10) {
+            break;
+        }
+    }
+
+    endwin();
+
+    return;
+}
+
+
+
 void suspense(){
+    clear();
+    nodelay(stdscr, TRUE);
+    noecho();
+    int ch = getch(), speed=1000000;
     for (int i =0; i < 3; i++){
+        ch = getch();
+        if (ch == 10) {
+            speed = 100000;
+        }
         move(grid1.length/2+i-1, (grid1.width*3-1)/2);
         printw(".\n");
         refresh();
-        sleep(1);
+        usleep(speed);
     }
+    clear();
+    refresh();
 }
 
 void chapter1(){
-    grid1.print("Welcome user.");
     clear();
-    grid1.print("Enter the grid.");
+    attron(COLOR_PAIR(6));
+    playsound("Files/recogtrack.ogg",1);
+    grid1.print("'Where am I?'");
+    getchar();
+    suspense();
+    attroff(COLOR_PAIR(6));
+    grid1.print("Darkness. Everything around you is pitch black.");
+    grid1.print("Confused and scared, you start running.");
+    grid1.print("To which direction, to what destination? Honest to God, the world may never know.");
+    grid1.print("You pass streets");
+    grid1.print("roads");
+    grid1.print("buildings");
+    attron(A_BOLD);
+    grid1.print("ALL");
+    attron(COLOR_PAIR(6));
+    grid1.print("ILLUMINATED",1);
+    attron(A_BLINK);
+    grid1.print("ILLUMINATED",3);
+    attroff(A_BLINK);
+    attroff(COLOR_PAIR(6));
+    attroff(A_BOLD);
+    getchar();
     clear();
-}
+    displayimg("Files/street.jpg");
 
+    attron(COLOR_PAIR(6));
+    grid1.print("'This isn't happening...'",4);
+    attroff(COLOR_PAIR(6));
+    grid1.print("You look around you. Not a soul in sight.");
+    grid1.print("Just the illuminated streets, buildings and signs.");
+    grid1.print("It was just you and the lifeless and quiet city of illumi-",1);
+    playsound("Files/landing.ogg");
+    displayimg("Files/rec.jpg");
+    attron(COLOR_PAIR(6));
+    attron(A_BOLD);
+    grid1.print("'Oh man this is happening!'",4);
+    attroff(COLOR_PAIR(6));
+    attroff(A_BOLD);
+    grid1.print("You try to run away from the ship,");
+    grid1.print("but the ground you were standing on is now a platform rising up to the skies;");
+    grid1.print("taking you into the ship.");
+    clear();
+    displayimg("Files/recog.jpg");
+    grid1.print("You find yourself standing in a line with other people.");
+    suspense();
+    attron(A_ITALIC);
+    grid1.print("Things.");
+    attroff(A_ITALIC);
+    grid1.print("Something about them didn't seem quite human.");
+    grid1.print("You look up, and see a number of men in illuminated suits.");
+    displayimg("Files/rectify.png");
+    grid1.print("One of them approaches the line-up and starts scanning the first in line to your left.",4);
+    displayimg("Files/rectify.png");
+    attron(COLOR_PAIR(1));
+    attron(A_BOLD);
+    playsound("Files/rectify.ogg");
+    grid1.print("'RECTIFY'",4);
+    attroff(COLOR_PAIR(1));
+    attroff(A_BOLD);
+    grid1.print("You desperately try to move, only to find that your feet is locked and immobilized.");
+    displayimg("Files/rectify.png");
+    attron(COLOR_PAIR(1));
+    attron(A_BOLD);
+    playsound("Files/rectify.ogg");
+    grid1.print("'RECTIFY'",4);
+    attroff(COLOR_PAIR(1));
+    attroff(A_BOLD);
+    playsound("Files/games.ogg");
+    grid1.print("It seems like he is examining the faces of the others standing beside you. And categorizing them.");
+    grid1.print("You’ve been dreading for it, but it’s now nearing your turn.");
+    move(grid1.length/2,0);
+    attron(COLOR_PAIR(COLOR_GREEN));
+    for(int i = 0 ; i< 4; i++,sleep(1),refresh())
+        printw("\t'Not the games'\n\n");
+    clear();
+    attroff(COLOR_PAIR(COLOR_GREEN));
+    grid1.print("The guy besides you starts pleading as his turn comes up.");
+    clear();
+    move(grid1.length/2,0);
+    attron(COLOR_PAIR(COLOR_GREEN));
+    printw("\tPLEASE NOT THE GAMES!");
+    refresh();
+    getchar();
+    attroff(COLOR_PAIR(COLOR_GREEN));
+    attron(COLOR_PAIR(1));
+    attron(A_BOLD);
+    playsound("Files/games.ogg");
+    grid1.print("'GAMES'",4);
+    attroff(COLOR_PAIR(1));
+    attroff(A_BOLD);
+    move(grid1.length/2,0);
+    attron(COLOR_PAIR(COLOR_GREEN));
+    printw("\tNO PLEASE!");
+    getchar();
+    attroff(COLOR_PAIR(COLOR_GREEN));
+    grid1.print("The poor man starts flailing as they lead him away.");
+    grid1.print("He breaks free and immediately runs towards the ship's exit which lead to a long way down.");
+    grid1.print("Dead end...");
+    suspense();
+    grid1.print("And yet he still jumped. To his death.");
+    grid1.print("Were the games all that bad? It was your turn now, maybe you'll get 'rectified'.");
+    grid1.print("Whatever that was...");
+    attron(COLOR_PAIR(1));
+    attron(A_BOLD);
+    playsound("Files/games.ogg");
+    grid1.print("'GAMES'",4);
+    attroff(COLOR_PAIR(1));
+    attroff(A_BOLD);
+    grid1.print("Dread fills your belly and you resist their cold grip");
+    attron(COLOR_PAIR(99));
+    grid1.print("CRACK",3);
+    attroff(COLOR_PAIR(99));
+    grid1.print("Something hits the back of your head and takes out the lights in your head.");
+    grid1.print("Looks like they weren't going to risk another suicidal maniac.");
+}
+void entertron(){
+    playsound("Files/thegrid.ogg");
+    mvprintw(grid1.length, 0,"Press Enter to continue...");
+    displayimg("Files/riding.gif");
+    attron(A_BOLD);
+    grid1.print("Directed and Coded by");
+    getchar();
+    attron(COLOR_PAIR(COLOR_MAGENTA));
+    grid1.print("Marzouq Abedur Rahman");
+    attroff(COLOR_PAIR(COLOR_MAGENTA));
+    attroff(A_BOLD);
+    grid1.print("1823917");
+    mvprintw(grid1.length, 0,"Press Enter to continue...");
+    displayimg("Files/riding.gif");
+    attron(A_BOLD);
+    grid1.print("Storyline by");
+    attron(COLOR_PAIR(COLOR_YELLOW));
+    grid1.print("Ayunni Jasmine");
+    attroff(COLOR_PAIR(COLOR_YELLOW));
+    attroff(A_BOLD);
+    grid1.print("1823917");
+    mvprintw(grid1.length, 0,"Press Enter to continue...");
+    displayimg("Files/riding.gif");
+    attron(A_BOLD);
+    grid1.print("Art and Animation by");
+    attron(COLOR_PAIR(COLOR_GREEN));
+    grid1.print("Abdul Ghani");
+    attroff(COLOR_PAIR(COLOR_GREEN));
+    attroff(A_BOLD);
+    grid1.print("1823917");
+    mvprintw(grid1.length, 0,"Press Enter to continue...");
+    displayimg("Files/riding.gif");
+    attron(A_BOLD);
+    grid1.print("Optimized by");
+    attron(COLOR_PAIR(COLOR_RED));
+    grid1.print("Ameera 'Eclipse'");
+    attroff(COLOR_PAIR(COLOR_RED));
+    attroff(A_BOLD);
+    grid1.print("1823917");
+    mvprintw(grid1.length, 0,"Press Enter to continue...");
+    displayimg("Files/cluwalk.gif");
+
+    grid1.print("Made for Dr. Rizal's EOP project.");
+    displayimg("Files/disc.jpg");
+    attron(A_BOLD);
+    attron(A_BLINK);
+    init_pair(100,6,1);
+    init_pair(101,6,2);
+    attron(COLOR_PAIR(100));
+    grid1.print("Enter the grid?",3);
+    getchar();
+    attroff(COLOR_PAIR(100));
+    attron(COLOR_PAIR(101));
+    grid1.print("Enter the grid?",3);
+    attroff(COLOR_PAIR(101));
+    attroff(A_BOLD);
+    attroff(A_BLINK);
+}
+void chapter2(){
+
+}
 void bikesgame(){
+    initscr();
     class computer{
     public:
         unordered_map <int, int> freespace;
@@ -165,33 +480,8 @@ void bikesgame(){
                 if (freespace[direc] > freespace[maxdirec]){
                     maxdirec=direc;
                 }
-                if (grid1.grid[x][y]=='|' || grid1.grid[x][y]!='_'){
-                    unblocked.push_back(direc);
-                }
             }
-            if (!unblocked.empty()){
-                for (int direc: unblocked){
-                    if(freespace[direc]>freespace[maxdirec]){
-                        maxdirec=direc;
-                    }
-                    else if (freespace[direc]>2){
-                        maxdirec=direc;
-                    }
-                }
-                unblocked.clear();
-            }
-            switch (maxdirec){
-                case 1:
-                    return KEY_UP;
-                case 2:
-                    return KEY_DOWN;
-                case 3:
-                    return KEY_RIGHT;
-                case 4:
-                    return KEY_LEFT;
-                default:
-                    printw("ERROR");
-            }
+            return maxdirec;
         }
     };
     computer ai;
@@ -243,6 +533,8 @@ void bikesgame(){
             grid1.grid_output();
             refresh();
             usleep(250000);
+            trail =' ';
+            mapper= ' ';
         }
         void move(){
             if (speed == 0){
@@ -258,7 +550,6 @@ void bikesgame(){
                         grid1.grid[x-1][y]=mapper;
                         x-=1;
                         grid1.grid_output();
-                        refresh();
                     }
                     else{
                         x1= x-1;
@@ -274,7 +565,6 @@ void bikesgame(){
                         grid1.grid[x][y+1]=mapper;
                         y+=1;
                         grid1.grid_output();
-                        refresh();
                     }
                     else{
                         x1= x;
@@ -290,7 +580,6 @@ void bikesgame(){
                         grid1.grid[x+1][y]=mapper;
                         x+=1;
                         grid1.grid_output();
-                        refresh();
                     }
                     else{
                         x1= x+1;
@@ -306,8 +595,6 @@ void bikesgame(){
                         grid1.grid[x][y-1]=mapper;
                         y-=1;
                         grid1.grid_output();
-
-                        refresh();
                     }
                     else{
                         x1= x;
@@ -322,119 +609,157 @@ void bikesgame(){
             location.second=y;
         }
     };
-    //Todo:- Get terminal size.
-    int l, w;
-    getmaxyx(stdscr, l, w);
-    grid1.grid_builder(l-1,w/3);
     grid1.grid_output();
-    bike player1, clu;
-    l = grid1.length/2;
-    w =grid1.width/2;
-    player1.bike_builder(1,"Marz", make_pair(l,w+1), 'P', '.');
-    clu.bike_builder(2, "Clu", make_pair(l, w), 'C', ',');
-    clu.maxspeed=3;
+    bike player1, clu, ai1, ai2;
+    player1.bike_builder(1,"Marz", make_pair(grid1.length/2,grid1.width/2+1), 'P', '.');
+    clu.bike_builder(2, "Clu", make_pair(grid1.length/2, grid1.width/2-5), 'C', ',');
     int movement, movement2;
-    nodelay(stdscr, TRUE);
-    noecho();
     playsound("Files/track.ogg");
-    while (player1.alive && clu.alive){
-        clear();
-        if ((movement = getch()) == ERR) {
-            player1.move();
-            movement2 = ai.move(clu.direction, clu.location);
-            switch (movement2){
-                case KEY_UP:
-                    clu.direct(1);
-                    clu.move();
-                    break;
-                case KEY_LEFT:
-                    clu.direct(4);
-                    clu.move();
-                    break;
-                case KEY_DOWN:
-                    clu.direct(2);
-                    clu.move();
-                    break;
-                case KEY_RIGHT:
-                    clu.direct(3);
-                    clu.move();
-                    break;
-                default:
-                    continue;
-            }
-            usleep(500000);
-        }
 
-        else{
-            switch (movement){
-                case 119:
-                    player1.direct(1);
-                    player1.move();
-                    break;
-                case 97:
-                    player1.direct(4);
-                    player1.move();
-                    break;
-                case 115:
-                    player1.direct(2);
-                    player1.move();
-                    break;
-                case 100:
-                    player1.direct(3);
-                    player1.move();
-                    break;
-                default:
-                    continue;
+    if (aiplay){
+        ai1.bike_builder(2, "ai1", make_pair(grid1.length/2, 1), 'A', ',');
+        ai2.bike_builder(2, "ai1", make_pair(grid1.length/2+4, 1), 'A', ',');
+
+        while (player1.alive && clu.alive){
+            if ((movement = getch()) == ERR) {
+                clu.direct(ai.move(clu.direction, clu.location));
+                ai1.direct(ai.move(ai1.direction, ai1.location));
+                ai2.direct(ai.move(ai2.direction, ai2.location));
+                player1.move();
+                clu.move();
+                if(ai1.alive)
+                    ai1.move();
+                if(ai2.alive)
+                    ai2.move();
             }
-            movement2 = ai.move(clu.direction, clu.location);
-            switch (movement2){
-                case KEY_UP:
-                    clu.direct(1);
-                    clu.move();
-                    break;
-                case KEY_LEFT:
-                    clu.direct(4);
-                    clu.move();
-                    break;
-                case KEY_DOWN:
-                    clu.direct(2);
-                    clu.move();
-                    break;
-                case KEY_RIGHT:
-                    clu.direct(3);
-                    clu.move();
-                    break;
-                default:
-                    continue;
-            }
-            usleep(500000);
+
+            else{
+                switch (movement){
+                    case 119:
+                        player1.direct(1);
+                        player1.move();
+                        break;
+                    case 97:
+                        player1.direct(4);
+                        player1.move();
+                        break;
+                    case 115:
+                        player1.direct(2);
+                        player1.move();
+                        break;
+                    case 100:
+                        player1.direct(3);
+                        player1.move();
+                        break;
+                    default:
+                        continue;
+                }
+                clu.direct(ai.move(clu.direction, clu.location));
+                ai1.direct(ai.move(ai1.direction, ai1.location));
+                ai2.direct(ai.move(ai2.direction, ai2.location));
+                clu.move();
+                if(ai1.alive)
+                    ai1.move();
+                if(ai2.alive)
+                    ai2.move();
+                }
+            usleep(250000);
+            refresh();
         }
     }
+
+    else{//Two players, WASD for P and IJKL for Clu.
+        while (player1.alive && clu.alive){
+            if ((movement = getch()) == ERR) {
+                player1.move();
+                clu.move();
+            }
+
+            else{
+                switch (movement){
+                    case 119:
+                        player1.direct(1);
+                        player1.move();
+                        clu.move();
+                        break;
+                    case 97:
+                        player1.direct(4);
+                        player1.move();
+                        clu.move();
+                        break;
+                    case 115:
+                        player1.direct(2);
+                        player1.move();
+                        clu.move();
+                        break;
+                    case 100:
+                        player1.direct(3);
+                        player1.move();
+                        clu.move();
+                        break;
+                    case KEY_UP:
+                        clu.direct(1);
+                        clu.move();
+                        player1.move();
+                        break;
+                    case KEY_LEFT:
+                        clu.direct(4);
+                        clu.move();
+                        player1.move();
+                        break;
+                    case KEY_DOWN:
+                        clu.direct(2);
+                        clu.move();
+                        player1.move();
+                        break;
+                    case KEY_RIGHT:
+                        clu.direct(3);
+                        clu.move();
+                        player1.move();
+                        break;
+                    default:
+                        continue;
+                }
+            }
+            usleep(250000);
+            refresh();
+        }
+    }
+
+
     if (!player1.alive){
-        clear();
-        grid1.print("GAME OVER");
-        playsound("Files/endofline.ogg");
+        playsound("Files/endofline.ogg",1);
+        displayimg("Files/clu_intro.jpg");
+        grid1.print("GAME OVER",1);
         refresh();
         sleep(5);
-    } else{
+    }
+    else{
         clear();
-        grid1.print("YOU WIN");
+        grid1.print("YOU WIN",1);
         refresh();
         sleep(2);
     }
+
 }
 
 
 int main() {
+    nodelay(stdscr, TRUE);
+    noecho();
+    int choice;
+    cin >> choice;
+    if (choice==1)
+        aiplay= true;
     initscr();
-    start_color();
-    playsound("Files/battle.ogg");
-
-    init_pair(1, COLOR_CYAN, COLOR_BLACK);
-    init_pair(2, COLOR_RED, COLOR_BLACK);
-    init_pair(3,COLOR_YELLOW, COLOR_RED);
-    //chapter1();
-    bikesgame();
+    InitCurses();
+    init_pair(99,3,1);
+    int l, w;
+    getmaxyx(stdscr, l, w);
+    grid1.grid_builder(l-1,w/3);
+    chapter1();
+    entertron();
+    //bikesgame();
     endwin();
     return 0;
 }
