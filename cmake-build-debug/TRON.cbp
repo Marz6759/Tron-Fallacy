@@ -84,9 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/marz/TRON/dispimage.h">
-			<Option target="TRON"/>
-		</Unit>
 		<Unit filename="/home/marz/TRON/main.cpp">
 			<Option target="TRON"/>
 		</Unit>

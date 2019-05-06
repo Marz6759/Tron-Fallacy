@@ -16,7 +16,7 @@
 #include <cstring>
 
 void suspense();
-
+int l, w;
 using namespace std;
 
 unordered_map <int, int> dec_inc = {{1,2},{2,1},{3,4},{4,3}};
@@ -27,7 +27,7 @@ sf::Sound sound, effect;
 
 sf::SoundBuffer buffer, buffer2;
 
-void playsound(string filepath, int option=2){
+void playsound(string filepath, int option=2) {
     if (option==1){
         try{
             if (!buffer.loadFromFile(filepath)){
@@ -230,14 +230,13 @@ void displayimg(char *argv, bool loop= true){
             usleep(10000 * delay[fptr]);
             ++fptr;
         }
-        if (loop == true){
+        if (loop == false){
+            break;
+        } else{
             int ch = getch();
-            if (ch == 10) {
+            if(ch==10){
                 break;
             }
-        } else{
-            getchar();
-            break;
         }
     }
 
@@ -267,7 +266,7 @@ void bikesgame(){
     class computer{
     public:
         unordered_map <int, int> freespace;
-        int move(int direction, pair <int, int> location){
+        int move(int direction, pair <int, int> location, int speed){
             int x, y, maxdirec=1;
             vector <int> unblocked;
             for (int direc=1; direc <5; direc++){
@@ -301,6 +300,22 @@ void bikesgame(){
                         }
                         freespace[direc]+=1;
                     }
+                    if (grid1.grid[x][y]=='|'){
+                        if (y==0 && (grid1.grid[x-1][y+1]==' ' || grid1.grid[x+1][y+1]==' ')){
+                            unblocked.emplace_back(direc);
+                        }
+                        else if (y==w && (grid1.grid[x-1][y-1]==' ' || grid1.grid[x+1][y-1]==' ')){
+                            unblocked.emplace_back(direc);
+                        }
+                    }
+                    else if( grid1.grid[x][y]=='_'){
+                        if (x==0 && (grid1.grid[x+1][y-1]==' ' || grid1.grid[x+1][y+1]==' ')){
+                            unblocked.emplace_back(direc);
+                        }
+                        else if (x==l && (grid1.grid[x-1][y-1]==' ' || grid1.grid[x-1][y+1]==' ')){
+                            unblocked.emplace_back(direc);
+                        }
+                    }
                 }
                 else{
                     freespace[dec_inc[direc]]=0;
@@ -309,6 +324,19 @@ void bikesgame(){
                 if (freespace[direc] > freespace[maxdirec]){
                     maxdirec=direc;
                 }
+            }
+            if (!unblocked.empty()){
+                int newmax=0, newmaxdirec;
+                for (int unblockeddirec : unblocked){
+                    if (freespace[unblockeddirec]>newmax){
+                        newmax=freespace[unblockeddirec];
+                        newmaxdirec=unblockeddirec;
+                    }
+                }
+                if (newmax>maxdirec/2){
+                    maxdirec=newmaxdirec;
+                }
+                unblocked.clear();
             }
             return maxdirec;
         }
@@ -335,7 +363,7 @@ void bikesgame(){
             if(input_direction == direction && speed < maxspeed)
                 speed+=1;
             else if(input_direction == direction && speed == maxspeed)
-                speed=2;
+                return;
             else if (dec_inc[direction] == input_direction && speed >0){
                 speed-=1;
             }
@@ -435,22 +463,19 @@ void bikesgame(){
     };
     grid1.grid_output();
     bike player1, clu, ai1, ai2;
-    player1.bike_builder(1,"Marz", make_pair(grid1.length/2,grid1.width/2+1), 'P', '.');
-    clu.bike_builder(2, "Clu", make_pair(grid1.length/2, grid1.width/2-5), 'C', ',');
     int movement;
+    player1.bike_builder(1,"Marz", make_pair(grid1.length/2,grid1.width/2+1), 'P', '.');
     playsound("Files/track.ogg");
-
     if (aiplay){
-        ai1.bike_builder(2, "ai1", make_pair(grid1.length/2, 1), 'A', ',');
-        ai2.bike_builder(2, "ai1", make_pair(grid1.length/2+4, 1), 'A', ',');
-
-        while (player1.alive && clu.alive){
+        ai1.bike_builder(2, "ai1", make_pair(grid1.length/2, 7), 'A', ',');
+        ai2.bike_builder(2, "ai1", make_pair(grid1.length/2+4, 7), 'A', ',');
+        player1.move();
+        //Level 1.
+        while (player1.alive && (ai1.alive||ai2.alive)){
             if ((movement = getch()) == ERR) {
-                clu.direct(ai.move(clu.direction, clu.location));
-                ai1.direct(ai.move(ai1.direction, ai1.location));
-                ai2.direct(ai.move(ai2.direction, ai2.location));
+                ai1.direct(ai.move(ai1.direction, ai1.location, ai1.speed));
+                ai2.direct(ai.move(ai2.direction, ai2.location, ai1.speed));
                 player1.move();
-                clu.move();
                 if(ai1.alive)
                     ai1.move();
                 if(ai2.alive)
@@ -478,14 +503,55 @@ void bikesgame(){
                     default:
                         continue;
                 }
-                clu.direct(ai.move(clu.direction, clu.location));
-                ai1.direct(ai.move(ai1.direction, ai1.location));
-                ai2.direct(ai.move(ai2.direction, ai2.location));
-                clu.move();
+                ai1.direct(ai.move(ai1.direction, ai1.location,ai1.speed));
+                ai2.direct(ai.move(ai2.direction, ai2.location,ai1.speed));
                 if(ai1.alive)
                     ai1.move();
                 if(ai2.alive)
                     ai2.move();
+            }
+            grid1.grid_output();
+            usleep(250000); //Lower framerate please
+            refresh();
+        }
+        //Level 2
+        grid1.grid_builder(l-1,w/3);
+        playsound("Files/track.ogg");
+        grid1.grid_output();
+        clu.bike_builder(2, "Clu", make_pair(grid1.length/2, grid1.width/2-5), 'C', ',');
+        clu.maxspeed=2;
+        player1.bike_builder(1,"Marz", make_pair(grid1.length/2,grid1.width/2+1), 'P', '.');
+        player1.maxspeed=1;
+        while (player1.alive && clu.alive){
+            if ((movement = getch()) == ERR) {
+                clu.direct(ai.move(clu.direction, clu.location,clu.speed));
+                player1.move();
+                clu.move();
+            }
+
+            else{
+                switch (movement){
+                    case 119:
+                        player1.direct(1);
+                        player1.move();
+                        break;
+                    case 97:
+                        player1.direct(4);
+                        player1.move();
+                        break;
+                    case 115:
+                        player1.direct(2);
+                        player1.move();
+                        break;
+                    case 100:
+                        player1.direct(3);
+                        player1.move();
+                        break;
+                    default:
+                        continue;
+                }
+                clu.direct(ai.move(clu.direction, clu.location,clu.speed));
+                clu.move();
             }
             grid1.grid_output();
             usleep(250000);
@@ -494,6 +560,7 @@ void bikesgame(){
     }
 
     else{//Two players, WASD for P and IJKL for Clu.
+        clu.bike_builder(2, "Clu", make_pair(grid1.length/2, grid1.width/2-5), 'C', ',');
         while (player1.alive && clu.alive){
             if ((movement = getch()) == ERR) {
                 player1.move();
@@ -552,7 +619,6 @@ void bikesgame(){
         }
     }
 
-
     if (!player1.alive){
         playsound("Files/endofline.ogg",1);
         displayimg("Files/clu_intro.jpg");
@@ -563,6 +629,7 @@ void bikesgame(){
     else{
         clear();
         grid1.print("YOU WIN",1);
+        displayimg("Files/transport.gif");
         refresh();
         sleep(2);
     }
@@ -579,6 +646,7 @@ void chapter1(){
     attroff(COLOR_PAIR(6));
     grid1.print("Darkness. Everything around you is pitch black.");
     grid1.print("Confused and scared, you start running.");
+    displayimg("Files/running.gif");
     grid1.print("To which direction, to what destination? Honest to God, the world may never know.");
     grid1.print("You pass streets");
     grid1.print("roads");
@@ -601,8 +669,8 @@ void chapter1(){
     attroff(COLOR_PAIR(6));
     grid1.print("You look around you. Not a soul in sight.");
     grid1.print("Just the illuminated streets, buildings and signs.");
-    grid1.print("It was just you and the lifeless and quiet city of illumi-",1);
-    playsound("Files/landing.ogg");
+    grid1.print("It was just you and the lifeless and quiet city of illumi-");
+    playsound("Files/landing1.ogg");
     displayimg("Files/rec.jpg");
     attron(COLOR_PAIR(6));
     attron(A_BOLD);
@@ -699,7 +767,7 @@ void entertron(){
     attroff(A_BOLD);
     grid1.print("1823917");
     mvprintw(grid1.length, 0,"Press Enter to continue...");
-    displayimg("Files/riding.gif");
+    displayimg("Files/dsic.jpg");
     attron(A_BOLD);
     grid1.print("Storyline by");
     attron(COLOR_PAIR(COLOR_YELLOW));
@@ -708,7 +776,7 @@ void entertron(){
     attroff(A_BOLD);
     grid1.print("1823917");
     mvprintw(grid1.length, 0,"Press Enter to continue...");
-    displayimg("Files/riding.gif");
+    displayimg("Files/cluface.gif",false);
     attron(A_BOLD);
     grid1.print("Art and Animation by");
     attron(COLOR_PAIR(COLOR_GREEN));
@@ -717,7 +785,7 @@ void entertron(){
     attroff(A_BOLD);
     grid1.print("1823917");
     mvprintw(grid1.length, 0,"Press Enter to continue...");
-    displayimg("Files/cluface.gif", false);
+    displayimg("Files/comingdown.gif", false);
     attron(A_BOLD);
     grid1.print("Optimized by");
     attron(COLOR_PAIR(COLOR_RED));
@@ -727,9 +795,7 @@ void entertron(){
     grid1.print("1823917");
     mvprintw(grid1.length, 0,"Press Enter to continue...");
     displayimg("Files/cluwalk.gif", false);
-
     grid1.print("Made for Dr. Rizal's EOP project.");
-    displayimg("Files/riding.gif");
     attron(A_BOLD);
     attron(A_BLINK);
     init_pair(100,6,1);
@@ -766,9 +832,25 @@ void chapter2(){
     grid1.print("It must've been a dream.");
     grid1.print("An echo from the past of him telling you stories when you were a kid");
     grid1.print("Stories of him going to this amazing new world");
-    grid1.print("A digital world; a new frontier.");
+    grid1.print("A new world; a digital frontier.");
     grid1.print("He called it 'The grid'");
-    grid1.print("God, the things he put in your head...");
+    grid1.print("God, the things he put inside of your head...");
+    grid1.print("Maybe it got to him too, because one day; he was gone.");
+    grid1.print("Just like that.");
+    suspense();
+    attron(COLOR_PAIR(COLOR_CYAN));
+    grid1.print("'Wait, where am I?'");
+    attroff(COLOR_PAIR(COLOR_CYAN));
+    grid1.print("You find yourself in a white room.");
+    grid1.print("Void of furniture or ornaments except for the bed you were on.");
+    grid1.print("This was definitely not your room.");
+    attron(COLOR_PAIR(COLOR_CYAN));
+    grid1.print("'So the flying ship wasn't just a hallucination...'");
+    attroff(COLOR_PAIR(COLOR_CYAN));
+    grid1.print("As if on queue, four women out of nowhere in white approaches you.");
+    grid1.print("They start fitting you with equipment.");
+    displayimg("Files/initialize.gif", false);
+
 }
 
 
@@ -779,13 +861,13 @@ int main() {
     initscr();
     InitCurses();
     init_pair(99,3,1);
-    int l, w;
+
     getmaxyx(stdscr, l, w);
-    grid1.grid_builder(l-1,w/3);
-    //chapter1();
-    //entertron();
+    grid1.grid_builder(l,w/3);
+    chapter1();
+    entertron();
     chapter2();
-    //bikesgame();
+    bikesgame();
     endwin();
     return 0;
 }

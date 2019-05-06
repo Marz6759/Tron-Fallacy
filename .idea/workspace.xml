@@ -11,7 +11,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d461c1b7-7423-43ef-a413-e3df9c8f5303" name="Default Changelist" comment="" />
+    <list default="true" id="d461c1b7-7423-43ef-a413-e3df9c8f5303" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Files/clupissed.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/comingdown.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/dsic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/end.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/initialize.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/landing1.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/lost.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/running.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/survive.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/transport.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/disc.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Files/disc.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TRON.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TRON.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +41,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13140">
-              <caret line="745" selection-start-line="745" selection-end-line="745" />
+            <state relative-caret-position="761">
+              <caret line="856" selection-start-line="856" selection-end-line="856" />
               <folding>
-                <element signature="e#22553#22895#0" />
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#1041#1280#0" />
+                <element signature="e#1282#4203#1" />
+                <element signature="e#4241#5930#0" />
+                <element signature="e#5932#6311#0" />
+                <element signature="e#6313#18984#0" />
+                <element signature="e#9346#13155#1" />
+                <element signature="e#18986#23524#0" />
+                <element signature="e#23526#25384#0" />
+                <element signature="e#25386#26907#0" />
+                <element signature="e#26910#27193#0" />
               </folding>
             </state>
           </provider>
@@ -37,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/image.hxx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-301">
+            <state relative-caret-position="252">
               <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#48#68#0" expanded="true" />
@@ -78,7 +104,7 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="114" />
     <option name="width" value="940" />
     <option name="height" value="789" />
@@ -97,11 +123,6 @@
             <path>
               <item name="TRON" type="b2602c69:ProjectViewProjectNode" />
               <item name="TRON" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TRON" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TRON" type="462c0819:PsiDirectoryNode" />
-              <item name="Files" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -155,17 +176,20 @@
       <updated>1556516260709</updated>
       <workItem from="1556516261771" duration="23177000" />
       <workItem from="1556614676031" duration="18050000" />
+      <workItem from="1557046952300" duration="974000" />
+      <workItem from="1557071777391" duration="87000" />
+      <workItem from="1557111222710" duration="4725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41227000" />
+    <option name="totallyTimeSpent" value="66072000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25320512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2628205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -214,9 +238,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dispimage.cpp" />
     <entry file="file://$PROJECT_DIR$/dispimage.h" />
-    <entry file="file://$PROJECT_DIR$/ascii.hxx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dispimage.cc" />
     <entry file="file:///usr/include/curses.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -248,16 +269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image.hxx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-301">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#48#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
@@ -265,12 +276,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Files/initialize.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/transport.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/end.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image.hxx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#48#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Downloads/img2term-master/main.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ascii.hxx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-553" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13140">
-          <caret line="745" selection-start-line="745" selection-end-line="745" />
+        <state relative-caret-position="761">
+          <caret line="856" selection-start-line="856" selection-end-line="856" />
           <folding>
-            <element signature="e#22553#22895#0" />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1041#1280#0" />
+            <element signature="e#1282#4203#1" />
+            <element signature="e#4241#5930#0" />
+            <element signature="e#5932#6311#0" />
+            <element signature="e#6313#18984#0" />
+            <element signature="e#9346#13155#1" />
+            <element signature="e#18986#23524#0" />
+            <element signature="e#23526#25384#0" />
+            <element signature="e#25386#26907#0" />
+            <element signature="e#26910#27193#0" />
           </folding>
         </state>
       </provider>
