@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/marz/TRON/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/marz/TRON/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f1b3b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f1b3b.dir/build.make CMakeFiles/cmTC_f1b3b.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f1b3b.dir/testCCompiler.c.o
-/usr/bin/gcc    -o CMakeFiles/cmTC_f1b3b.dir/testCCompiler.c.o   -c /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_f1b3b
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1b3b.dir/link.txt --verbose=1
-/usr/bin/gcc      CMakeFiles/cmTC_f1b3b.dir/testCCompiler.c.o  -o cmTC_f1b3b 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_f4485/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f4485.dir/build.make CMakeFiles/cmTC_f4485.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f4485.dir/testCCompiler.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_f4485.dir/testCCompiler.c.o   -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_f4485
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4485.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_f4485.dir/testCCompiler.c.o  -o cmTC_f4485 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c700f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c700f.dir/build.make CMakeFiles/cmTC_c700f.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o
-/usr/bin/gcc    -o CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o   -c /home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_c700f
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c700f.dir/link.txt --verbose=1
-/usr/bin/gcc     -v CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o  -o cmTC_c700f 
+Run Build Command:"/usr/bin/make" "cmTC_ccb9b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ccb9b.dir/build.make CMakeFiles/cmTC_ccb9b.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o   -c /home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_ccb9b
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccb9b.dir/link.txt --verbose=1
+/usr/bin/gcc     -v CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o  -o cmTC_ccb9b 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,24 +61,24 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c700f' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZAVUA4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c700f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c700f' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ccb9b' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaJCWyH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ccb9b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ccb9b' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c700f/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c700f.dir/build.make CMakeFiles/cmTC_c700f.dir/build]
-  ignore line: [make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/gcc    -o CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o   -c /home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_c700f]
-  ignore line: [/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c700f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/gcc     -v CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o  -o cmTC_c700f ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ccb9b/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ccb9b.dir/build.make CMakeFiles/cmTC_ccb9b.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/gcc    -o CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o   -c /home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_ccb9b]
+  ignore line: [/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccb9b.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/gcc     -v CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o  -o cmTC_ccb9b ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c700f' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZAVUA4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c700f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ccb9b' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaJCWyH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ccb9b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccZAVUA4.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccaJCWyH.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c700f] ==> ignore
+    arg [cmTC_ccb9b] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_c700f.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_ccb9b.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -157,17 +157,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f2b29/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f2b29.dir/build.make CMakeFiles/cmTC_f2b29.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f2b29.dir/feature_tests.c.o
-/usr/bin/gcc   -std=c11 -o CMakeFiles/cmTC_f2b29.dir/feature_tests.c.o   -c /home/marz/TRON/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f2b29
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2b29.dir/link.txt --verbose=1
-/usr/bin/gcc      CMakeFiles/cmTC_f2b29.dir/feature_tests.c.o  -o cmTC_f2b29 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_b674e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b674e.dir/build.make CMakeFiles/cmTC_b674e.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b674e.dir/feature_tests.c.o
+/usr/bin/gcc   -std=c11 -o CMakeFiles/cmTC_b674e.dir/feature_tests.c.o   -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b674e
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b674e.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_b674e.dir/feature_tests.c.o  -o cmTC_b674e 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -177,17 +177,17 @@ make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTm
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_49c6f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_49c6f.dir/build.make CMakeFiles/cmTC_49c6f.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_49c6f.dir/feature_tests.c.o
-/usr/bin/gcc   -std=c99 -o CMakeFiles/cmTC_49c6f.dir/feature_tests.c.o   -c /home/marz/TRON/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_49c6f
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49c6f.dir/link.txt --verbose=1
-/usr/bin/gcc      CMakeFiles/cmTC_49c6f.dir/feature_tests.c.o  -o cmTC_49c6f 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_188b2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_188b2.dir/build.make CMakeFiles/cmTC_188b2.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_188b2.dir/feature_tests.c.o
+/usr/bin/gcc   -std=c99 -o CMakeFiles/cmTC_188b2.dir/feature_tests.c.o   -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_188b2
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_188b2.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_188b2.dir/feature_tests.c.o  -o cmTC_188b2 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -197,17 +197,17 @@ make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTm
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7c450/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7c450.dir/build.make CMakeFiles/cmTC_7c450.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7c450.dir/feature_tests.c.o
-/usr/bin/gcc   -std=c90 -o CMakeFiles/cmTC_7c450.dir/feature_tests.c.o   -c /home/marz/TRON/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_7c450
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c450.dir/link.txt --verbose=1
-/usr/bin/gcc      CMakeFiles/cmTC_7c450.dir/feature_tests.c.o  -o cmTC_7c450 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_fc626/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fc626.dir/build.make CMakeFiles/cmTC_fc626.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc626.dir/feature_tests.c.o
+/usr/bin/gcc   -std=c90 -o CMakeFiles/cmTC_fc626.dir/feature_tests.c.o   -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_fc626
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc626.dir/link.txt --verbose=1
+/usr/bin/gcc      CMakeFiles/cmTC_fc626.dir/feature_tests.c.o  -o cmTC_fc626 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -215,30 +215,30 @@ make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTm
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1d697/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1d697.dir/build.make CMakeFiles/cmTC_1d697.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1d697.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_1d697.dir/testCXXCompiler.cxx.o -c /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_1d697
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d697.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_1d697.dir/testCXXCompiler.cxx.o  -o cmTC_1d697 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_217f7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_217f7.dir/build.make CMakeFiles/cmTC_217f7.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_217f7.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_217f7.dir/testCXXCompiler.cxx.o -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_217f7
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_217f7.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_217f7.dir/testCXXCompiler.cxx.o  -o cmTC_217f7 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6ff86/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6ff86.dir/build.make CMakeFiles/cmTC_6ff86.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o -c /home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_6ff86
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ff86.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6ff86 
+Run Build Command:"/usr/bin/make" "cmTC_1b057/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1b057.dir/build.make CMakeFiles/cmTC_1b057.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o -c /home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_1b057
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b057.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1b057 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,24 +250,24 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6ff86' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cceJuDuJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_6ff86 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6ff86' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b057' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccq5r4hV.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b057 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b057' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_6ff86/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6ff86.dir/build.make CMakeFiles/cmTC_6ff86.dir/build]
-  ignore line: [make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o -c /home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_6ff86]
-  ignore line: [/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ff86.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6ff86 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_1b057/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_1b057.dir/build.make CMakeFiles/cmTC_1b057.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o -c /home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_1b057]
+  ignore line: [/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b057.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1b057 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6ff86' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cceJuDuJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_6ff86 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b057' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccq5r4hV.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b057 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cceJuDuJ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccq5r4hV.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_6ff86] ==> ignore
+    arg [cmTC_1b057] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_6ff86.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_1b057.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,17 +342,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_98c89/fast"
-/usr/bin/make -f CMakeFiles/cmTC_98c89.dir/build.make CMakeFiles/cmTC_98c89.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_98c89.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_98c89.dir/feature_tests.cxx.o -c /home/marz/TRON/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_98c89
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98c89.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_98c89.dir/feature_tests.cxx.o  -o cmTC_98c89 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ee2b7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ee2b7.dir/build.make CMakeFiles/cmTC_ee2b7.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ee2b7.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_ee2b7.dir/feature_tests.cxx.o -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ee2b7
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee2b7.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_ee2b7.dir/feature_tests.cxx.o  -o cmTC_ee2b7 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -415,17 +415,17 @@ make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTm
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_eeae3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_eeae3.dir/build.make CMakeFiles/cmTC_eeae3.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_eeae3.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_eeae3.dir/feature_tests.cxx.o -c /home/marz/TRON/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_eeae3
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eeae3.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_eeae3.dir/feature_tests.cxx.o  -o cmTC_eeae3 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_86242/fast"
+/usr/bin/make -f CMakeFiles/cmTC_86242.dir/build.make CMakeFiles/cmTC_86242.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_86242.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_86242.dir/feature_tests.cxx.o -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_86242
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86242.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_86242.dir/feature_tests.cxx.o  -o cmTC_86242 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -488,17 +488,17 @@ make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTm
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_971d6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_971d6.dir/build.make CMakeFiles/cmTC_971d6.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_971d6.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_971d6.dir/feature_tests.cxx.o -c /home/marz/TRON/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_971d6
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_971d6.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_971d6.dir/feature_tests.cxx.o  -o cmTC_971d6 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_b9d7e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b9d7e.dir/build.make CMakeFiles/cmTC_b9d7e.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b9d7e.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_b9d7e.dir/feature_tests.cxx.o -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b9d7e
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9d7e.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_b9d7e.dir/feature_tests.cxx.o  -o cmTC_b9d7e 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -561,17 +561,17 @@ make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTm
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6f2ad/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6f2ad.dir/build.make CMakeFiles/cmTC_6f2ad.dir/build
-make[1]: Entering directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6f2ad.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_6f2ad.dir/feature_tests.cxx.o -c /home/marz/TRON/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_6f2ad
-/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f2ad.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_6f2ad.dir/feature_tests.cxx.o  -o cmTC_6f2ad 
-make[1]: Leaving directory '/home/marz/TRON/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_8d77f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8d77f.dir/build.make CMakeFiles/cmTC_8d77f.dir/build
+make[1]: Entering directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8d77f.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_8d77f.dir/feature_tests.cxx.o -c /home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8d77f
+/home/marz/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d77f.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_8d77f.dir/feature_tests.cxx.o  -o cmTC_8d77f 
+make[1]: Leaving directory '/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

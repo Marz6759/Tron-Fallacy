@@ -1,6 +1,6 @@
 ## Welcome to TRON FALLACY
 
-You can download the executable for Debian-based Linux operating systems [HERE](https://github.com/Marz6759/Tron-Fallacy/main).
+You can download the executable for Debian-based Linux operating systems [HERE](main).
 
 If you wish to view the source code for the game, you may do so [HERE](https://github.com/Marz6759/Tron-Fallacy).
 

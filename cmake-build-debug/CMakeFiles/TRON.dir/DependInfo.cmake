@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/marz/TRON/main.cpp" "/home/marz/TRON/cmake-build-debug/CMakeFiles/TRON.dir/main.cpp.o"
+  "/home/marz/Tron-Fallacy/main.cpp" "/home/marz/Tron-Fallacy/cmake-build-debug/CMakeFiles/TRON.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
