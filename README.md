@@ -1,25 +1,25 @@
 ## Welcome to TRON FALLACY
 
-You can download the executables for [WINDOWS](https://github.com/Marz6759/TRON/edit/master/README.md) and [LINUX](https://github.com/Marz6759/TRON/edit/master/README.md) of the game here.
+You can download the executable for Debian-based Linux operating systems [HERE](https://github.com/Marz6759/TRON/edit/master/README.md).
 
-If you wish to view the source code for the game, you may do so [here](https://github.com/Marz6759/TRON).
+If you wish to view the source code for the game, you may do so [HERE](https://github.com/Marz6759/TRON).
 
 ### Description
 
+End-of-semester project for Dr. Rizal's Element's of Programming class.
+What an amazing first semester of uni! x)
+
 Our group has decided to recreate the retro era of Tron by coming up with a terminal-based game inspired by Tron Legacy.
-This project utilises several advanced libraries/data structures like;
+This project utilises several libraries and data structures like;
 
 ```markdown
-
-- Ncurses
+- Ncurses (PDcurses if you use windows- you peasant.)
 - SFML
 - Vectors
 - Unordered_Maps
 - Tuples
 - Magick++
 - graphicsmagick-libmagick-dev-compat
-
-[Link](url) and ![Image](src)
 ```
 To make this project with g++, simply:
 ```markdown
@@ -29,13 +29,35 @@ For more details; contact marzouq.abedur@live.iium.edu.my
 
 P.S; Buy my book :P
 
+
 ### Screenshots
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Marz6759/TRON/settings). The name of this theme is saved in the Jekyll `main.cpp` configuration file.
+![Image](Screenshots/Screenshot%20from%202019-05-08%2021-30-02.png)
+Dialogue printing.
 
-### WE HAVE ASCII ANIMATIONS
+![Image](Screenshots/Screenshot%20from%202019-05-08%2021-31-20.png)
+MULTIPLE DIALOGUE PRINTING (WHAT?)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+![Image](Screenshots/Screenshot%20from%202019-05-08%2021-31-35.png)
+ASCII ANIMATIONNNNNNS
 
-### Credits
+![Image](Screenshots/Screenshot%20from%202019-05-08%2021-35-20.png)
+Cool graphics
 
+![Image](Screenshots/Screenshot%20from%202019-05-08%2021-35-54.png)
+Made by a team of first year students.
+
+![Image](Screenshots/Screenshot%20from%202019-05-08%2021-36-01.png)
+No explanation needed... IT'S TOO COOL
+
+![Image](Screenshots/Screenshot%20from%202019-05-08%2022-08-48.png)
+DUMB AI PLAYING AGAINST PLAYERS FTW
+
+
+
+### Made by
+```markdown
+- Marzouq Abedur Rahman
+- Armeeroh Samae 
+- Ayunni Jasmine binti Abdul Aziz @ Muhiyiddin
+```

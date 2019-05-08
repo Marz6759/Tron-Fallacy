@@ -12,7 +12,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d461c1b7-7423-43ef-a413-e3df9c8f5303" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Files/cluend.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/clutrans.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/gamestart.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/playertrans.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/playerwin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Files/survive.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot from 2019-05-08 21-30-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot from 2019-05-08 21-31-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot from 2019-05-08 21-31-35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot from 2019-05-08 21-35-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot from 2019-05-08 21-35-54.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot from 2019-05-08 21-35-58.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot from 2019-05-08 21-36-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/Screenshot from 2019-05-08 22-08-48.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/end.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Files/proceed.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -26,29 +43,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="676" column="29" selection-start-line="676" selection-start-column="29" selection-end-line="676" selection-end-column="29" />
+            <state relative-caret-position="653">
+              <caret line="876" column="4" lean-forward="true" selection-start-line="876" selection-start-column="4" selection-end-line="876" selection-end-column="4" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
                 <element signature="e#535#1040#0" />
                 <element signature="e#1042#1281#0" />
                 <element signature="e#1283#4204#1" />
+                <element signature="e#4242#6040#0" />
+                <element signature="e#6042#6421#0" />
+                <element signature="e#6423#19075#0" />
+                <element signature="e#19077#23600#0" />
+                <element signature="e#23602#25135#0" />
+                <element signature="e#25137#27245#0" />
+                <element signature="e#27247#28915#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image.hxx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#48#68#0" expanded="true" />
-              </folding>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="767">
+                <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -79,8 +102,8 @@
         <option value="$PROJECT_DIR$/dispimage.cc" />
         <option value="$PROJECT_DIR$/image.hxx" />
         <option value="$PROJECT_DIR$/metric.hxx" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -109,7 +132,7 @@
             <path>
               <item name="TRON" type="b2602c69:ProjectViewProjectNode" />
               <item name="TRON" type="462c0819:PsiDirectoryNode" />
-              <item name="Files" type="462c0819:PsiDirectoryNode" />
+              <item name="Screenshots" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -127,6 +150,7 @@
       <recent name="$PROJECT_DIR$/Files" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Screenshots" />
       <recent name="$PROJECT_DIR$/Files" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -165,17 +189,19 @@
       <workItem from="1557046952300" duration="974000" />
       <workItem from="1557071777391" duration="87000" />
       <workItem from="1557111222710" duration="4725000" />
+      <workItem from="1557318733305" duration="1870000" />
+      <workItem from="1557321456059" duration="3463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67058000" />
+    <option name="totallyTimeSpent" value="73159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26602563" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2724359" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -219,9 +245,6 @@
     <entry file="file://$PROJECT_DIR$/Files/rect.txt" />
     <entry file="file://$PROJECT_DIR$/Files/disc.txt" />
     <entry file="file://$PROJECT_DIR$/Files/road.txt" />
-    <entry file="file://$PROJECT_DIR$/xterm.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dispimage.cpp" />
     <entry file="file://$PROJECT_DIR$/dispimage.h" />
     <entry file="file://$PROJECT_DIR$/dispimage.cc" />
@@ -229,13 +252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="285" column="21" selection-start-line="285" selection-start-column="21" selection-end-line="285" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/metric.hxx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -255,32 +271,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Files/initialize.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Files/transport.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Files/end.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image.hxx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#48#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/end.gif" />
     <entry file="file://$PROJECT_DIR$/../Downloads/img2term-master/main.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -295,16 +289,81 @@
         <state relative-caret-position="-553" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/image.hxx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-301">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#48#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metric.hxx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding>
+            <element signature="e#38#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xterm.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/clu_intro.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/transport.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/running.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/riding.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/gamestart.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/survive.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/cluend.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="676" column="29" selection-start-line="676" selection-start-column="29" selection-end-line="676" selection-end-column="29" />
+        <state relative-caret-position="653">
+          <caret line="876" column="4" lean-forward="true" selection-start-line="876" selection-start-column="4" selection-end-line="876" selection-end-column="4" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
             <element signature="e#535#1040#0" />
             <element signature="e#1042#1281#0" />
             <element signature="e#1283#4204#1" />
+            <element signature="e#4242#6040#0" />
+            <element signature="e#6042#6421#0" />
+            <element signature="e#6423#19075#0" />
+            <element signature="e#19077#23600#0" />
+            <element signature="e#23602#25135#0" />
+            <element signature="e#25137#27245#0" />
+            <element signature="e#27247#28915#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="767">
+            <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

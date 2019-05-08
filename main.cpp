@@ -1,3 +1,8 @@
+/*
+ * Marzouq Abedur Rahman 1823917
+ *
+ */
+
 #include <iostream>
 #include "ascii.hxx"
 #include "metric.hxx"
@@ -6,7 +11,7 @@
 #include <unistd.h>
 #include <unordered_map>
 #include <stdio.h>
-#include <ncurses.h>
+#include <ncurses.h> // USE Pdcurses FOR WINDOWS.
 #include <stdlib.h>
 #include <vector>
 #include <SFML/Audio.hpp>
@@ -468,164 +473,111 @@ void bikesgame(){
     grid1.grid_output();
     bike player1, clu, ai1, ai2;
     int movement;
+    grid1.grid_builder(l, w/3);
     player1.bike_builder(1,"Marz", make_pair(grid1.length/2,grid1.width/2+1), 'P', '.');
     playsound("Files/track.ogg");
-    if (aiplay){
-        ai1.bike_builder(2, "ai1", make_pair(grid1.length/2, 7), 'A', ',');
-        ai2.bike_builder(2, "ai1", make_pair(grid1.length/2+4, 7), 'A', ',');
-        player1.move();
-        //Level 1.
-        while (player1.alive && (ai1.alive||ai2.alive)){
-            if ((movement = getch()) == ERR) {
-                ai1.direct(ai.move(ai1.direction, ai1.location, ai1.speed));
-                ai2.direct(ai.move(ai2.direction, ai2.location, ai1.speed));
-                player1.move();
-                if(ai1.alive)
-                    ai1.move();
-                if(ai2.alive)
-                    ai2.move();
-            }
-
-            else{
-                switch (movement){
-                    case 119:
-                        player1.direct(1);
-                        player1.move();
-                        break;
-                    case 97:
-                        player1.direct(4);
-                        player1.move();
-                        break;
-                    case 115:
-                        player1.direct(2);
-                        player1.move();
-                        break;
-                    case 100:
-                        player1.direct(3);
-                        player1.move();
-                        break;
-                    default:
-                        continue;
-                }
-                ai1.direct(ai.move(ai1.direction, ai1.location,ai1.speed));
-                ai2.direct(ai.move(ai2.direction, ai2.location,ai1.speed));
-                if(ai1.alive)
-                    ai1.move();
-                if(ai2.alive)
-                    ai2.move();
-            }
-            grid1.grid_output();
-            usleep(250000); //Lower framerate please
-            refresh();
+    ai1.bike_builder(2, "ai1", make_pair(grid1.length/2, 7), 'A', ',');
+    ai2.bike_builder(2, "ai1", make_pair(grid1.length/2+4, 7), 'A', ',');
+    player1.move();
+    //Level 1.
+    while (player1.alive && (ai1.alive||ai2.alive)){
+        if ((movement = getch()) == ERR) {
+            ai1.direct(ai.move(ai1.direction, ai1.location, ai1.speed));
+            ai2.direct(ai.move(ai2.direction, ai2.location, ai1.speed));
+            player1.move();
+            if(ai1.alive)
+                ai1.move();
+            if(ai2.alive)
+                ai2.move();
         }
-        //Level 2
-        grid1.grid_builder(l-1,w/3);
-        playsound("Files/track.ogg");
+
+        else{
+            switch (movement){
+                case 119:
+                    player1.direct(1);
+                    player1.move();
+                    break;
+                case 97:
+                    player1.direct(4);
+                    player1.move();
+                    break;
+                case 115:
+                    player1.direct(2);
+                    player1.move();
+                    break;
+                case 100:
+                    player1.direct(3);
+                    player1.move();
+                    break;
+                default:
+                    continue;
+            }
+            ai1.direct(ai.move(ai1.direction, ai1.location,ai1.speed));
+            ai2.direct(ai.move(ai2.direction, ai2.location,ai1.speed));
+            if(ai1.alive)
+                ai1.move();
+            if(ai2.alive)
+                ai2.move();
+        }
         grid1.grid_output();
-        clu.bike_builder(2, "Clu", make_pair(grid1.length/2, grid1.width/2-5), 'C', ',');
-        clu.maxspeed=2;
-        player1.bike_builder(1,"Marz", make_pair(grid1.length/2,grid1.width/2+1), 'P', '.');
-        player1.maxspeed=1;
-        while (player1.alive && clu.alive){
-            if ((movement = getch()) == ERR) {
-                clu.direct(ai.move(clu.direction, clu.location,clu.speed));
-                player1.move();
-                clu.move();
-            }
-
-            else{
-                switch (movement){
-                    case 119:
-                        player1.direct(1);
-                        player1.move();
-                        break;
-                    case 97:
-                        player1.direct(4);
-                        player1.move();
-                        break;
-                    case 115:
-                        player1.direct(2);
-                        player1.move();
-                        break;
-                    case 100:
-                        player1.direct(3);
-                        player1.move();
-                        break;
-                    default:
-                        continue;
-                }
-                clu.direct(ai.move(clu.direction, clu.location,clu.speed));
-                clu.move();
-            }
-            grid1.grid_output();
-            usleep(250000);
-            refresh();
-        }
+        usleep(250000); //Lower framerate please
+        refresh();
     }
-
-    else{//Two players, WASD for P and IJKL for Clu.
-        clu.bike_builder(2, "Clu", make_pair(grid1.length/2, grid1.width/2-5), 'C', ',');
-        while (player1.alive && clu.alive){
-            if ((movement = getch()) == ERR) {
-                player1.move();
-                clu.move();
-            }
-
-            else{
-                switch (movement){
-                    case 119:
-                        player1.direct(1);
-                        player1.move();
-                        clu.move();
-                        break;
-                    case 97:
-                        player1.direct(4);
-                        player1.move();
-                        clu.move();
-                        break;
-                    case 115:
-                        player1.direct(2);
-                        player1.move();
-                        clu.move();
-                        break;
-                    case 100:
-                        player1.direct(3);
-                        player1.move();
-                        clu.move();
-                        break;
-                    case 105:
-                        clu.direct(1);
-                        clu.move();
-                        player1.move();
-                        break;
-                    case 106:
-                        clu.direct(4);
-                        clu.move();
-                        player1.move();
-                        break;
-                    case 107:
-                        clu.direct(2);
-                        clu.move();
-                        player1.move();
-                        break;
-                    case 108:
-                        clu.direct(3);
-                        clu.move();
-                        player1.move();
-                        break;
-                    default:
-                        continue;
-                }
-            }
-            grid1.grid_output();
-            usleep(250000);
-            refresh();
+    //Level 2
+    grid1.grid_builder(l-1,w/3);
+    playsound("Files/track.ogg");
+    grid1.grid_output();
+    clu.bike_builder(2, "Clu", make_pair(grid1.length/2, grid1.width/2-5), 'C', ',');
+    clu.maxspeed=2;
+    player1.bike_builder(1,"Marz", make_pair(grid1.length/2,grid1.width/2+1), 'P', '.');
+    player1.maxspeed=1;
+    if (!player1.alive){
+        playsound("Files/endofline.ogg",1);
+        displayimg("Files/cluface.gif", false);
+        grid1.print("GAME OVER",1);
+        refresh();
+        sleep(5);
+        return;
+    }
+    while (player1.alive && clu.alive){
+        if ((movement = getch()) == ERR) {
+            clu.direct(ai.move(clu.direction, clu.location,clu.speed));
+            player1.move();
+            clu.move();
         }
+
+        else{
+            switch (movement){
+                case 119:
+                    player1.direct(1);
+                    player1.move();
+                    break;
+                case 97:
+                    player1.direct(4);
+                    player1.move();
+                    break;
+                case 115:
+                    player1.direct(2);
+                    player1.move();
+                    break;
+                case 100:
+                    player1.direct(3);
+                    player1.move();
+                    break;
+                default:
+                    continue;
+            }
+            clu.direct(ai.move(clu.direction, clu.location,clu.speed));
+            clu.move();
+        }
+        grid1.grid_output();
+        usleep(250000);
+        refresh();
     }
 
     if (!player1.alive){
         playsound("Files/endofline.ogg",1);
-        displayimg("Files/clu_intro.jpg");
+        displayimg("Files/cluface.gif", false);
         grid1.print("GAME OVER",1);
         refresh();
         sleep(5);
@@ -633,9 +585,11 @@ void bikesgame(){
     else{
         clear();
         grid1.print("YOU WIN",1);
-        displayimg("Files/transport.gif");
+        displayimg("Files/playerwin.jpg");
         refresh();
         sleep(2);
+        grid1.print("To be continued...");
+        grid1.print("Thanks for playing!");
     }
 
 }
@@ -781,15 +735,6 @@ void entertron(){
     mvprintw(grid1.length, 0,"Press Enter to continue...");
     displayimg("Files/cluface.gif",false);
     attron(A_BOLD);
-    grid1.print("Art and Animation by");
-    attron(COLOR_PAIR(COLOR_GREEN));
-    grid1.print("Abdul Ghani");
-    attroff(COLOR_PAIR(COLOR_GREEN));
-    attroff(A_BOLD);
-    grid1.print("1823917");
-    mvprintw(grid1.length, 0,"Press Enter to continue...");
-    displayimg("Files/comingdown.gif", false);
-    attron(A_BOLD);
     grid1.print("Optimized by");
     attron(COLOR_PAIR(COLOR_RED));
     grid1.print("Ameera 'Eclipse'");
@@ -867,27 +812,73 @@ void chapter2(){
 }
 
 void chapter3(){
-    suspense();
     grid1.print("Flashing lights blind you momentarily as you exit the room you were in.");
     suspense();
-
+    playsound("Files/discwars.ogg");
+    grid1.print("And then you see it.");
+    grid1.print("The grid.");
+    grid1.print("The crowd's cheers deafen you as you see a well dressed man stride towards you.");
+    displayimg("Files/clu_intro.jpg");
+    attron(COLOR_PAIR(COLOR_GREEN));
+    grid1.print("'CLU!'",1);
+    usleep(500000);
+    mvprintw(grid1.length/2+10, grid1.width-10, "'CLU!'");
+    refresh();
+    usleep(500000);
+    attron(A_BOLD);
+    mvprintw(grid1.length/2-1, grid1.width+10, "'CLU!'");
+    attroff(A_BOLD);
+    attroff(COLOR_PAIR(COLOR_GREEN));
+    usleep(500000);
+    refresh();
+    usleep(500000);
+    getchar();
+    grid1.print("Clu... the name sounded familiar.");
+    attron(COLOR_PAIR(COLOR_RED));
+    grid1.print("'I've been waiting a long time for this.'");
+    attroff(COLOR_PAIR(COLOR_RED));
+    attron(COLOR_PAIR(COLOR_CYAN));
+    grid1.print("'Do I know you?'");
+    attroff(COLOR_PAIR(COLOR_CYAN));
+    suspense();
+    grid1.print("No response. Only a chuckle.");
+    attron(COLOR_PAIR(COLOR_RED));
+    grid1.print("'Try not to crash.'");
+    attroff(COLOR_PAIR(COLOR_RED));
+    grid1.print("'Clu' takes out his scroll and starts running off.");
+    grid1.print("What was he possibly doing?");
+    grid1.print("He then jumps and simultaneously stretches out the scroll.");
+    grid1.print("And as if out of thin air; a bike forms.");
+    playsound("Files/nowthis.ogg");
+    grid1.print("Oh, so that's what you do with that thing...");
+    grid1.print("You take a moment and 'jump-start' your own bike.");
+    displayimg("Files/playertrans.gif", false);
+    grid1.print("Success.");
+    attron(A_BOLD);
+    grid1.print("INCOMING INSTRUCTIONS");
+    grid1.print("W - UP");
+    grid1.print("A - DOWN");
+    grid1.print("S - DOWN");
+    grid1.print("D - RIGHT");
+    grid1.print("Do not crash into anything.");
+    attroff(A_BOLD);
 }
 
 int main() {
-    InitializeMagick(NULL);
+    InitializeMagick(nullptr);
     nodelay(stdscr, TRUE);
     noecho();
-    aiplay= false;
     initscr();
     InitCurses();
     init_pair(99,3,1);
-
     getmaxyx(stdscr, l, w);
-    grid1.grid_builder(l,w/3);
+    grid1.width=w/3;
+    grid1.length=l;
     chapter1();
-    //entertron();
-    //chapter2();
-    //bikesgame();
+    entertron();
+    chapter2();
+    chapter3();
+    bikesgame();
     endwin();
     return 0;
 }
