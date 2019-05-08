@@ -21,7 +21,7 @@ This project utilises several libraries and data structures like;
 - Magick++
 - graphicsmagick-libmagick-dev-compat
 ```
-To make this project with g++, simply:
+To make this project with g++, simply install the libraries mentioned above and:
 ```markdown
 g++ -o main main.cpp -O3 -std=c++11 `Magick++-config --cppflags --cxxflags --ldflags --libs` -lncurses -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system
 ```
