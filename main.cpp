@@ -1,6 +1,9 @@
 /*
  * Marzouq Abedur Rahman 1823917
+ * Armeeroh Samae 1722098
+ * Ayunni Jasmine binti Abdul Aziz @ Muhiyiddin 1816714
  *
+ * TRON FALLACY
  */
 
 #include <iostream>
@@ -728,19 +731,19 @@ void entertron(){
     attron(A_BOLD);
     grid1.print("Storyline by");
     attron(COLOR_PAIR(COLOR_YELLOW));
-    grid1.print("Ayunni Jasmine");
+    grid1.print("Ayunni Jasmine binti Abdul Aziz @ Muhiyiddin");
     attroff(COLOR_PAIR(COLOR_YELLOW));
     attroff(A_BOLD);
-    grid1.print("1823917");
+    grid1.print("1816714");
     mvprintw(grid1.length, 0,"Press Enter to continue...");
     displayimg("Files/cluface.gif",false);
     attron(A_BOLD);
     grid1.print("Optimized by");
     attron(COLOR_PAIR(COLOR_RED));
-    grid1.print("Ameera 'Eclipse'");
+    grid1.print("Armeeroh 'Eclipse' Samae");
     attroff(COLOR_PAIR(COLOR_RED));
     attroff(A_BOLD);
-    grid1.print("1823917");
+    grid1.print("1722098");
     mvprintw(grid1.length, 0,"Press Enter to continue...");
     displayimg("Files/cluwalk.gif", false);
     grid1.print("Made for Dr. Rizal's EOP project.");
