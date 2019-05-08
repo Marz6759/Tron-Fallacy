@@ -12,19 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d461c1b7-7423-43ef-a413-e3df9c8f5303" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Files/clupissed.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/comingdown.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/dsic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/initialize.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/landing1.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/lost.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/running.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/survive.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Files/transport.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Files/disc.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Files/disc.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TRON.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TRON.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -41,20 +29,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="856" selection-start-line="856" selection-end-line="856" />
+            <state relative-caret-position="473">
+              <caret line="676" column="29" selection-start-line="676" selection-start-column="29" selection-end-line="676" selection-end-column="29" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#1041#1280#0" />
-                <element signature="e#1282#4203#1" />
-                <element signature="e#4241#5930#0" />
-                <element signature="e#5932#6311#0" />
-                <element signature="e#6313#18984#0" />
-                <element signature="e#9346#13155#1" />
-                <element signature="e#18986#23524#0" />
-                <element signature="e#23526#25384#0" />
-                <element signature="e#25386#26907#0" />
-                <element signature="e#26910#27193#0" />
+                <element signature="e#535#1040#0" />
+                <element signature="e#1042#1281#0" />
+                <element signature="e#1283#4204#1" />
               </folding>
             </state>
           </provider>
@@ -117,6 +98,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,11 +106,15 @@
               <item name="TRON" type="b2602c69:ProjectViewProjectNode" />
               <item name="TRON" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TRON" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TRON" type="462c0819:PsiDirectoryNode" />
+              <item name="Files" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,13 +169,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66072000" />
+    <option name="totallyTimeSpent" value="67058000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2628205" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26602563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -311,20 +297,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="856" selection-start-line="856" selection-end-line="856" />
+        <state relative-caret-position="473">
+          <caret line="676" column="29" selection-start-line="676" selection-start-column="29" selection-end-line="676" selection-end-column="29" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1041#1280#0" />
-            <element signature="e#1282#4203#1" />
-            <element signature="e#4241#5930#0" />
-            <element signature="e#5932#6311#0" />
-            <element signature="e#6313#18984#0" />
-            <element signature="e#9346#13155#1" />
-            <element signature="e#18986#23524#0" />
-            <element signature="e#23526#25384#0" />
-            <element signature="e#25386#26907#0" />
-            <element signature="e#26910#27193#0" />
+            <element signature="e#535#1040#0" />
+            <element signature="e#1042#1281#0" />
+            <element signature="e#1283#4204#1" />
           </folding>
         </state>
       </provider>

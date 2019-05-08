@@ -181,12 +181,16 @@ grid grid1;
 
 const int STDOUT(1);
 
-void displayimg(char *argv, bool loop= true){
+void displayimg(char *argv, bool loop= true, bool initialize =false){
     ImageLoader *loader = ImageLoader::get_instance(argv);
     vector<vector<vector<uint32_t>>> img;;
     vector<uint32_t> delay;
 
     tie(delay, img) = loader->load(argv, cols/2, 1 << 16);
+    if (initialize){
+        usleep(10000);
+        playsound("Files/initialize.ogg");
+    }
 
     if (!isatty(STDOUT)) {
         vector<vector<string>> asc = IMG2ASCII(img).convert();
@@ -230,7 +234,7 @@ void displayimg(char *argv, bool loop= true){
             usleep(10000 * delay[fptr]);
             ++fptr;
         }
-        if (loop == false){
+        if (!loop){
             break;
         } else{
             int ch = getch();
@@ -589,22 +593,22 @@ void bikesgame(){
                         player1.move();
                         clu.move();
                         break;
-                    case KEY_UP:
+                    case 105:
                         clu.direct(1);
                         clu.move();
                         player1.move();
                         break;
-                    case KEY_LEFT:
+                    case 106:
                         clu.direct(4);
                         clu.move();
                         player1.move();
                         break;
-                    case KEY_DOWN:
+                    case 107:
                         clu.direct(2);
                         clu.move();
                         player1.move();
                         break;
-                    case KEY_RIGHT:
+                    case 108:
                         clu.direct(3);
                         clu.move();
                         player1.move();
@@ -641,7 +645,6 @@ void chapter1(){
     attron(COLOR_PAIR(6));
     playsound("Files/recogtrack.ogg",1);
     grid1.print("'Where am I?'");
-    getchar();
     suspense();
     attroff(COLOR_PAIR(6));
     grid1.print("Darkness. Everything around you is pitch black.");
@@ -847,17 +850,34 @@ void chapter2(){
     attron(COLOR_PAIR(COLOR_CYAN));
     grid1.print("'So the flying ship wasn't just a hallucination...'");
     attroff(COLOR_PAIR(COLOR_CYAN));
+    playsound("Files/sirens.ogg");
     grid1.print("As if on queue, four women out of nowhere in white approaches you.");
     grid1.print("They start fitting you with equipment.");
-    displayimg("Files/initialize.gif", false);
+    displayimg("Files/initialize.gif", false, true);
+    attron(COLOR_PAIR(COLOR_CYAN));
+    playsound("Files/survive.ogg");
+    grid1.print("'Games?'");
+    attroff(COLOR_PAIR(COLOR_CYAN));
+    grid1.print("You look to one of them for an answer.");
+    displayimg("Files/survive.jpg");
+    attron(A_BOLD);
+    grid1.print("'Survive.'",4);
+    attroff(A_BOLD);
+    grid1.print("You're handed a scroll-like object as two uniformed men escort you away.");
+}
+
+void chapter3(){
+    suspense();
+    grid1.print("Flashing lights blind you momentarily as you exit the room you were in.");
+    suspense();
 
 }
 
-
 int main() {
+    InitializeMagick(NULL);
     nodelay(stdscr, TRUE);
     noecho();
-    aiplay= true;
+    aiplay= false;
     initscr();
     InitCurses();
     init_pair(99,3,1);
@@ -865,9 +885,9 @@ int main() {
     getmaxyx(stdscr, l, w);
     grid1.grid_builder(l,w/3);
     chapter1();
-    entertron();
-    chapter2();
-    bikesgame();
+    //entertron();
+    //chapter2();
+    //bikesgame();
     endwin();
     return 0;
 }
