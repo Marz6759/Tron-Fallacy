@@ -3,7 +3,7 @@
  * Armeeroh Samae 1722098
  * Ayunni Jasmine binti Abdul Aziz @ Muhiyiddin 1816714
  *
- * TRON FALLACY
+ * Tron-Fallacy FALLACY
  */
 
 #include <iostream>
@@ -29,7 +29,6 @@ using namespace std;
 
 unordered_map <int, int> dec_inc = {{1,2},{2,1},{3,4},{4,3}};
 int cols, lines;
-bool aiplay=false;
 
 sf::Sound sound, effect;
 
@@ -861,7 +860,7 @@ void chapter3(){
     grid1.print("INCOMING INSTRUCTIONS");
     grid1.print("W - UP");
     grid1.print("A - DOWN");
-    grid1.print("S - DOWN");
+    grid1.print("S - LEFT");
     grid1.print("D - RIGHT");
     grid1.print("Do not crash into anything.");
     attroff(A_BOLD);
